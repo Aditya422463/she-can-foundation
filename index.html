@@ -15,73 +15,70 @@
         }
 
         body {
-            background: #f4f4f4;
+            background: linear-gradient(to right, #f8f9fa, #e3f2fd);
             text-align: center;
         }
 
         header {
-            background: #ff69b4;
+            background: #6a1b9a;
             color: white;
-            padding: 20px;
+            padding: 25px;
+        }
+
+        header h1 {
+            font-size: 40px;
+        }
+
+        .designer {
+            margin-top: 10px;
+            font-size: 18px;
         }
 
         .container {
-            width: 80%;
+            padding: 40px 20px;
+        }
+
+        h2 {
+            color: #6a1b9a;
+            margin-bottom: 20px;
+        }
+
+        p {
+            max-width: 800px;
             margin: auto;
-            padding: 20px;
+            line-height: 1.8;
+            color: #444;
+            font-size: 18px;
         }
 
         img {
-            width: 300px;
-            max-width: 100%;
-            border-radius: 10px;
-            margin: 20px 0;
+            width: 350px;
+            border-radius: 12px;
+            margin: 25px 0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
 
-        .btn {
-            background: #ff69b4;
+        button {
+            background: #6a1b9a;
             color: white;
             border: none;
-            padding: 12px 25px;
-            border-radius: 5px;
+            padding: 12px 30px;
+            font-size: 18px;
+            border-radius: 6px;
             cursor: pointer;
-            margin: 15px 0;
+            transition: 0.3s;
         }
 
-        .btn:hover {
-            background: #e0559c;
-        }
-
-        form {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            width: 350px;
-            max-width: 100%;
-            margin: 20px auto;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        input,
-        textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+        button:hover {
+            background: #4a148c;
+            transform: scale(1.05);
         }
 
         footer {
-            background: #333;
+            background: #222;
             color: white;
             padding: 15px;
-            margin-top: 20px;
-        }
-
-        #message {
-            color: green;
-            margin-top: 10px;
-            font-weight: bold;
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -94,48 +91,30 @@
 
     <div class="container">
 
-        <h2>Empowering Women Through Education & Opportunities</h2>
+        <h2>Empowering Women, Building a Better Future</h2>
 
-        <section>
-            <h3>About Us</h3>
-            <p>
-                She Can Foundation is a non-profit organization dedicated to
-                empowering women and creating opportunities through education,
-                skill development, and community support.
-            </p>
-        </section>
+        <p>
+            She Can Foundation is a non-profit organization dedicated to
+            empowering women and creating opportunities through education,
+            skill development, and community support.
+        </p>
 
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600" alt="Women Empowerment">
+        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600" alt="Women Empowerment">
 
         <br>
 
-        <button class="btn">Learn More</button>
-
-        <h3>Contact Us</h3>
-
-        <form id="contactForm">
-            <input type="text" placeholder="Enter Your Name" required>
-            <input type="email" placeholder="Enter Your Email" required>
-            <textarea rows="4" placeholder="Enter Your Message" required></textarea>
-
-            <button type="submit" class="btn">Submit</button>
-
-            <p id="message"></p>
-        </form>
+        <button onclick="showMessage()">Learn More</button>
 
     </div>
 
     <footer>
-        <p>© 2026 She Can Foundation | All Rights Reserved</p>
-        <p>Developed by - Aditya Shakya </p>
+        © 2026 She Can Foundation | Developed - by Aditya
     </footer>
 
     <script>
-        document.getElementById("contactForm").addEventListener("submit", function (e) {
-            e.preventDefault();
-            document.getElementById("message").innerText =
-                "Form Submitted Successfully";
-        });
+        function showMessage() {
+            alert("Thank you for visiting She Can Foundation!");
+        }
     </script>
 
 </body>
