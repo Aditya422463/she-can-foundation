@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>She Can Foundation</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        header {
+            background: #ff69b4;
+            color: white;
+            padding: 20px;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        img {
+            width: 300px;
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .btn {
+            background: #ff69b4;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 15px 0;
+        }
+
+        .btn:hover {
+            background: #e0559c;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 350px;
+            max-width: 100%;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        #message {
+            color: green;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>She Can Foundation</h1>
+    </header>
+
+    <div class="container">
+
+        <h2>Empowering Women Through Education & Opportunities</h2>
+
+        <section>
+            <h3>About Us</h3>
+            <p>
+                She Can Foundation is a non-profit organization dedicated to
+                empowering women and creating opportunities through education,
+                skill development, and community support.
+            </p>
+        </section>
+
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600" alt="Women Empowerment">
+
+        <br>
+
+        <button class="btn">Learn More</button>
+
+        <h3>Contact Us</h3>
+
+        <form id="contactForm">
+            <input type="text" placeholder="Enter Your Name" required>
+            <input type="email" placeholder="Enter Your Email" required>
+            <textarea rows="4" placeholder="Enter Your Message" required></textarea>
+
+            <button type="submit" class="btn">Submit</button>
+
+            <p id="message"></p>
+        </form>
+
+    </div>
+
+    <footer>
+        <p>© 2026 She Can Foundation | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            document.getElementById("message").innerText =
+                "Form Submitted Successfully";
+        });
+    </script>
+
+</body>
+
+</html>
